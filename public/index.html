@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <title>Console Draw</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 10px;
+            background: #000000;
+            color: #FFFFFF;
+            font-size: 140%;
+            font-family: monospace;
+            text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        #commandPanel {
+            display: none;
+        }
+
+        form {
+            background: #000;
+            padding: 0px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form input {
+            background: #000000;
+            color: #FFFFFF;
+            border: 0;
+            padding: 0px;
+            width: 100%;
+            font-size: 100%;
+            font-family: monospace;
+        }
+
+        form input:focus {
+            outline-width: 0;
+        }
+
+        form label {
+            font-size: 100%;
+            flex: 0 0 auto;
+        }
+
+        form span {
+            display: block;
+            overflow: hidden;
+            flex: 1 0 0;
+        }
+
+        #version {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            font-size: 80%;
+        }
+
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            word-break: break-all;
+        }
+
+        #banner {
+            font-size: 2.3vw;
+            text-align: center;
+            padding: 0 0 10px 0;
+        }
+
+        .commandContainer {
+            flex-direction: row;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <label id="version">v1.0</label>
+    <div id="banner"></div>
+    <div id="messages">
+    </div>
+    <div id="commandPanel">
+        <form action="">
+            <div class='commandContainer'>
+                <label>enter command:&nbsp;</label>
+                <span>
+                    <input id="commandInput" autocomplete="off" />
+                </span>
+            </div>
+        </form>
+    </div>
+    <script src="/script/socket.io.slim.js"></script>
+    <script src="/script/jquery-3.3.1.min.js"></script>
+    <script src="/script/index.js"></script>
+</body>
+
+</html>
