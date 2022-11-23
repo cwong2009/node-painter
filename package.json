@@ -61,7 +61,7 @@
     "follow-redirects": "^1.5.10",
     "sinon": "^7.1.1",
     "sinon-chai": "^3.3.0",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.5.0",
     "source-map-support": "^0.5.9",
     "string-format": "^2.0.0",
     "tslint-sonarts": "^1.8.0"
